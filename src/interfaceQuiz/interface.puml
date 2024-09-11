@@ -1,0 +1,25 @@
+@startuml
+
+Interface Promotion {
+    getDiscountAmount()
+}
+
+Class Product implements Promotion{
+
+}
+
+Class Cart {
+    Product[] product
+    calculateDeliveryCharge()
+}
+
+Class Grocery extends Product{
+}
+
+Class Beauty extends Product{
+}
+
+Class LargeAppliance extends Product{
+}
+
+@enduml
