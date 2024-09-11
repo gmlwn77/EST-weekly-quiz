@@ -1,9 +1,7 @@
 package interfaceQuiz;
 
 public class Cart{
-	Product product = new Product();
 	Product[] products;
-
 
 	public Cart(Product[] products){
 		this.products = products;

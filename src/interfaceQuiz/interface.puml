@@ -5,11 +5,16 @@ Interface Promotion {
 }
 
 Class Product implements Promotion{
+    String name
+    int price
+    int weight
+    int delivery
 
+    getDiscountAmount()
 }
 
 Class Cart {
-    Product[] product
+    Product[] products
     calculateDeliveryCharge()
 }
 
