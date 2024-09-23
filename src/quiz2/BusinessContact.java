@@ -1,7 +1,7 @@
 package quiz2;
 
 public class BusinessContact extends Contact{
-	String company;
+	private String company;
 
 	BusinessContact(){
 	}
@@ -13,18 +13,15 @@ public class BusinessContact extends Contact{
 
 	@Override
 	public String toString() {
-		return String.valueOf("이름: " + name + ", 전화번호: " + phoneNumber + ", 회사명: " + company);
+		return String.valueOf(super.toString()+ ", 회사명: " + company);
 	}
 
 	@Override
 	public Contact add(){
-		System.out.println("이름을 입력하세요: ");
-		super.name = scanner.nextLine();
-		System.out.println("연락처를 입력하세요: ");
-		super.phoneNumber = scanner.nextLine();
+		super.add();
 		System.out.println("회사명을 입력하세요: ");
 		this.company = scanner.nextLine();
-		return new BusinessContact(name, phoneNumber, company);
+		return new BusinessContact(super.getName(), super.getPhoneNumber(), company);
 	}
 
 }

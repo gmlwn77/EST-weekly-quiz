@@ -21,10 +21,10 @@ public class Main {
 
 			switch (str){
 				case "1" -> {
-					addressBook.contacts.add(businessContact.add());
+					addressBook.getContacts().add(businessContact.add());
 				}
 				case "2" -> {
-					addressBook.contacts.add(personalContact.add());
+					addressBook.getContacts().add(personalContact.add());
 				}
 				case "3" -> addressBook.displayContacts();
 				case "4" -> {

@@ -5,7 +5,11 @@ import java.util.List;
 
 public class AddressBook {
 
-	List<Contact> contacts = new ArrayList<>();
+	private List<Contact> contacts = new ArrayList<>();
+
+	public AddressBook(){
+		this.contacts = new ArrayList<>();
+	}
 
 	public void displayContacts() {
 		if(contacts.isEmpty()){
@@ -17,10 +21,14 @@ public class AddressBook {
 		}
 	}
 
+	public List<Contact> getContacts(){
+		return contacts;
+	}
+
 	public void searchContact(String name) {
 		Contact str = null;
 		for (Contact con : contacts) {
-			if (String.valueOf(con).contains(name)) {
+			if (con.getName().equals(name)) {
 				System.out.println(con);
 				str = con;
 			}
