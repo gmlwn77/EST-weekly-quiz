@@ -1,11 +1,18 @@
 package interfaceQuiz;
 
 public class Product implements Promotion {
-	String name;
-	int price;
-	int weight;
-	int delivery;
+	private String name;
+	private int price;
+	private int weight;
+	private int delivery;
 
+	public Product(String name, int price, int weight) {
+		this.name = name;
+		this.price = price;
+		this.weight = weight;
+	}
+
+	@Override
 	public int getDiscountAmount(){
 		if(weight < 3){
 			delivery = 1000;

@@ -1,7 +1,7 @@
 package interfaceQuiz;
 
 public class Cart{
-	Product[] products;
+	private Product[] products;
 
 	public Cart(Product[] products){
 		this.products = products;
